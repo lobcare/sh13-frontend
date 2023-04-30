@@ -203,6 +203,17 @@ const useStyles = () => {
 };
 
 
+
+function ValueLabelComponent(props) {
+  const { children, value } = props;
+
+  return (
+    <Tooltip enterTouchDelay={0} placement="top" title={value}>
+      {children}
+    </Tooltip>
+  );
+}
+
 export default function SHCropper(props) {
   const { file, resetFile, setResult } = props;
 
